@@ -1,0 +1,212 @@
+
+.footer-container{
+    position: relative;
+    height: 500px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    
+}
+.footer {
+    position: fixed;
+    border-radius: 10px;
+    background-color: var(--color-blue);
+    height: 500px;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+.logo-image {
+    margin-left: -2%;
+    margin-bottom: 2%;
+}
+
+.logo-text {
+    width: 200px;
+}
+
+.company-text {
+    margin-left: 1%;
+    max-width: 40ch;
+    color: var(--color-yellow);
+    font-weight: 700;
+    font-size: var(--step--1);
+}
+
+
+.browse-container ul li {
+    width: 50%;
+    line-height: 1.8;
+    text-decoration: none;
+    
+}
+
+.browse-container ul li a{
+    text-decoration: none;
+}
+
+.header {
+    color: var(--color-yellow);
+    font-weight: 700;
+    font-size: var(--step-2);
+}
+
+.link:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+
+.link:focus-visible{
+    background-color: rgba(0,0,0,0.2);
+    outline: 2px dashed var(--color-yellow);
+}
+
+.link{
+    display: block;
+    color: var(--color-yellow);
+    font-weight: 700;
+    font-size: var(--step-0);
+    border-radius: 0 15px 15px 0;
+}
+
+
+
+.contact-subsection {
+    display: flex;
+    gap: 1rem;
+}
+
+.location-svg {
+    width: 20px;
+}
+
+.mail-svg {
+    width: 20px;
+}
+
+.discord-svg {
+    width: 20px;
+}
+
+.contact-text {
+    color: var(--color-yellow);
+    font-weight: 700;
+    font-size: var(--step--1);
+
+}
+
+.donate-text {
+    max-width: 40ch;
+    color: var(--color-yellow);
+    font-weight: 700;
+    font-size: var(--step--1);
+}
+
+.donate-button {
+    font-size: var(--step-1);
+}
+
+.legal-info {
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 4rem;
+}
+
+.copyright-text{
+    color: white;
+    font-size: var(--step-0);
+
+}
+
+.privacy-policy{
+    color: white;
+    font-size: var(--step-0);
+}
+
+
+
+@media (max-width: 1500px){
+    .content-container{
+        padding: 2rem;
+    }
+    .browse-container ul li {
+        width: 75%;
+        
+    }
+}
+@media (max-width: 1000px){
+    .footer-container{
+        height: 600px;
+    }
+
+    .footer{
+        height: 600px;
+    }
+    .content-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px){
+    .company-container{
+        display: none;
+    }
+
+    .browse-container ul li {
+        width: 75%;
+        
+    }
+
+    .donate-container{
+        grid-column: span 2;
+    }
+
+    .legal-info{
+        padding-inline: 2rem;
+    }
+
+
+}
+
+@media (max-width: 500px){
+    .content-container{
+        padding: 1rem;
+    }
+    .footer-container{
+        height: 550px;
+    }
+
+    .footer{
+        height: 550px;
+    }
+
+    .copyright-text{
+        color: white;
+        font-size: var(--step--1);
+    
+    }
+    
+    .privacy-policy{
+        color: white;
+        font-size: var(--step--1);
+    }
+}
+
+@media (max-width: 400px){
+    .legal-info{
+        padding-inline: 1rem;
+    }
+
+    .browse-container ul li {
+        width: 100%;
+        
+    }
+}

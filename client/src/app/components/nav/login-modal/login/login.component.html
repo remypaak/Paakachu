@@ -1,0 +1,19 @@
+<img class="image" src="../../../../assets/Welcome back.png" alt="welcome-back-image">
+<div class="login-content">
+    <app-close-button #closeButton></app-close-button>
+    <h1>Welcome back!</h1>
+    <form class="form login-form" [formGroup]="loginForm" (ngSubmit)="logIn()">
+
+        <app-form-field #usernameInput label="Username" controlName="username" [formGroup]="loginForm" id="username" [autofocus]="true">
+        </app-form-field>
+
+        <app-form-field label="Password" type="password" controlName="password" [formGroup]="loginForm"
+            id="password" autocomplete="new-password">
+        </app-form-field>
+
+        <button class="btn-primary" [disabled]="!loginForm.valid" type="submit">Log in</button>
+    </form>
+    <button #forgotPasswordLink class="forgot-link" (click)="flip()"><u>Forgot your password?</u></button>
+</div>
+
+

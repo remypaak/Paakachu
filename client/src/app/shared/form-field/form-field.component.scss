@@ -1,0 +1,63 @@
+:host{
+    width: 100%;
+    container-type: inline-size;
+    container-name: layout;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+
+label {
+    margin-right: auto;
+    margin-bottom: 0.15rem;
+    font-size: var(--step--1);
+}
+
+input{
+    width: 100%;
+    border-radius: 5px;
+    font-size: var(--step-1);
+    padding: 0.5rem 0 0.5rem 20px;
+    outline: 2px solid black;
+    border: none;
+}
+
+input.ng-invalid.ng-touched{
+    outline-color: var(--color-red);
+}
+
+input.ng-valid.ng-touched{
+    outline-color: green;
+}
+
+.error{
+    position: absolute;
+    top: 85%;
+    font-size: var(--step--1);
+    color: var(--color-red);
+    text-align: center;
+}
+
+@container layout (max-width: 500px) {    
+    .error{
+        top: 80%;
+    }
+}
+
+@media (max-width: 1000px){
+    .error{
+        top: 90%;
+        font-size: var(--step--2);
+    }
+}
+
+@media (max-width: 600px){
+    .error{
+        text-align: center;
+    }
+}

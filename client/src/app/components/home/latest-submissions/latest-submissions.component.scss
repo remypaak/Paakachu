@@ -1,0 +1,55 @@
+.content-container{
+    position: relative;
+    padding: 2.5rem 0;
+    overflow: hidden;
+}
+
+.header-text{
+    font-family: 'Sahitya';
+    text-align: center;
+    font-size: var(--step-2);
+}
+
+.image-track{
+    margin-left: 25%;
+    display: flex;
+    gap: 1rem;
+
+   
+}
+
+.image-track img {
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+    object-position: 100% center;
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px){
+    .image-track img{
+        width: 40vw;
+        height: 40vw;
+    }
+}
+
+@media (max-width: 750px){
+    .image-track img{
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+@media (max-width: 600px){
+    .image-track img{
+        width: 60vw;
+        height: 60vw;
+    }
+}
+
+@media (max-width: 450px){
+    .image-track img{
+        width: 70vw;
+        height: 70vw;
+    }
+}

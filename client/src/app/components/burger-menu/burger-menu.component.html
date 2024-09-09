@@ -1,0 +1,16 @@
+<div
+  tabindex="0"
+  class="burger-menu"
+  aria-label="Burger menu that opens the sidemenu with navigation links, login functionality and settings"
+  #burgerMenu
+  (click)="toggleSidebarMenu()"
+  (keydown)="handleKeyDown($event)"
+  role="button"
+  aria-expanded="false"
+>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+
+<app-sidebar (closeSidebar)="closeSidebar()"></app-sidebar>

@@ -1,0 +1,12 @@
+<app-flip-card [isFlipped]="isFlipped">
+  <p class="sr-only" id="modalDescription">
+    A modal with on the frontside login functionality and on the backside
+    functionality to retrieve your password via email
+  </p>
+  <div class="front">
+    <app-login (isFlipped)="flip()"></app-login>
+  </div>
+  <div class="back">
+    <app-forgot-password (isFlipped)="flip()"></app-forgot-password>
+  </div>
+</app-flip-card>

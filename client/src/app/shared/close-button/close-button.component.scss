@@ -1,0 +1,27 @@
+:host{
+    margin-left: auto;
+}
+
+.close-button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    
+}
+
+.close-button:hover {
+    .close-button-svg{
+        fill: red;
+    }
+   
+}
+
+.close-button:focus-visible {
+    outline: 2px dashed black;
+}
+
+.close-button-svg{
+    margin-left: auto;
+    height: 30px;
+    width: 30px;
+}

@@ -1,0 +1,88 @@
+.content-container {
+    padding: 2.5rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-container h2 {
+    text-align: center;
+    font-family: 'Sahitya';
+    font-weight: 700;
+    font-size: var(--step-2);
+}
+
+.text-container p {
+    font-size: var(--step-0);
+    max-width: 65ch;
+}
+
+.content-container img {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.discord-svg {
+    margin-inline: auto;
+    cursor: pointer;
+}
+
+.link-to-discord:hover, .link-to-discord:focus-visible{
+    .background-svg{
+        fill: var(--color-blue);
+    }
+
+    .icon-svg{
+        fill: var(--color-yellow);
+    }
+}
+.link-to-discord:focus-visible{
+outline: 2px dashed black;                  
+}
+
+.pikachu-discord {
+    width: 75%;
+}
+
+@media (max-width: 1000px) {
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .text-container {
+        order: 2
+    }
+
+    .content-container img {
+        order: 1;
+    }
+
+
+}
+
+@media (max-width: 700px) {
+    .pikachu-discord {
+        width: 100%;
+    }
+}
+
+
+// So screen readers will say out loud what's in this span element, but it's not visible on the screen
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

@@ -1,0 +1,41 @@
+<div class="form-field" [formGroup]="formGroup()">
+  <label [for]="id()">{{ label() }}@if (required()){<span>*</span>}</label>
+  <input
+    #input
+    [type]="type()"
+    [id]="id()"
+    [formControlName]="controlName()"
+    [required]="required()"
+    autocomplete="new-password"
+    aria-describedby="formControl.invalid ? 'error-message-' + id(): null"
+    [appAutofocus]="autofocus()"
+  />
+  @if (formControl.invalid && (formControl.dirty)) { @if
+  (formControl.hasError("minlength")) {
+  <p class="error" aria-live="assertive">
+    Password should be at least 6 characters
+  </p>
+  } @else if (formControl.hasError("invalidEmail")) {
+  <p class="error" aria-live="assertive">
+    Email must be in the format: user&#64;domain.com
+  </p>
+  } @else if (formControl.hasError("requireCapitalLetter")) {
+  <p class="error" aria-live="assertive">
+    Password should have at least one capital letter
+  </p>
+  } @else if (formControl.hasError("requireNumber")) {
+  <p class="error" aria-live="assertive">
+    Password should have at least one number
+  </p>
+  } @else if (formControl.hasError("requireNonAlphanumeric")) {
+  <p class="error" aria-live="assertive">
+    Password should have at least one special character
+  </p>
+  } @else if (formControl.hasError("isMatching")) {
+  <p class="error" aria-live="assertive">Passwords don't match</p>
+  } @else if (formControl.hasError('noReuse')) {
+    <p class="error" aria-live="assertive">New password must be different from old password</p>
+  }
+}
+
+</div>

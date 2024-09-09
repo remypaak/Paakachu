@@ -1,0 +1,64 @@
+<app-flip-card>
+  <div class="register-content">
+    <img
+      class="image"
+      src="../../../../assets/lemiyak_multiple_pokemon_text_Welcome_e19e84be-863a-4fb3-a1c7-aa44cd2774cc.png"
+      alt="Welcome image showing multiple Pokemon"
+    />
+    <section aria-label="Section for registrating account" class="welcome-content">
+        <app-close-button></app-close-button>
+      <h1 id="dialogTitle">Join the ultimate Pokémon photo Community!</h1>
+      <p class="sr-only" id="dialogDescription">
+        Register now to share your favorite Pokémon photos with the community.
+      </p>
+      <form class="form" aria-label="Form for registrating account" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <app-form-field
+          label="Username"
+          controlName="username"
+          [formGroup]="registerForm"
+          [required]="true"
+          id="username"
+        >
+        </app-form-field>
+
+        <app-form-field
+          label="Email address"
+          controlName="email"
+          [formGroup]="registerForm"
+          [required]="true"
+          id="email"
+        >
+        </app-form-field>
+
+        <app-form-field
+          label="Password"
+          controlName="password"
+          type="password"
+          [formGroup]="registerForm"
+          [required]="true"
+          id="password"
+        >
+        </app-form-field>
+
+        <app-form-field
+          label="Confirm password"
+          controlName="confirmPassword"
+          type="password"
+          [formGroup]="registerForm"
+          [required]="true"
+          id="confirmPassword"
+        >
+        </app-form-field>
+
+        <button
+          class="btn-primary"
+          [disabled]="!registerForm.valid"
+          type="submit"
+          aria-label="Submit the form to join the community"
+        >
+          Join the frame
+        </button>
+      </form>
+    </section>
+  </div>
+</app-flip-card>

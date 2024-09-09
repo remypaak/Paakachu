@@ -1,0 +1,173 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.32);
+    z-index: 997;
+    display: none; 
+}
+
+
+.sidebar-container{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-blue);
+    padding: 2rem;
+    border-radius: 0 20px 20px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 998;
+    display: flex;
+}
+
+@keyframes fadein{
+    0%{
+      left: -250px    }
+    100%{
+      left: 0;
+    }
+  }
+
+  @keyframes fadeout {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -250px;
+    }
+}
+
+.overlay.open {
+    display: block;
+
+    .sidebar-container{
+        animation: fadein 0.5s ease forwards;
+    }
+    
+}
+
+.overlay.close {
+    display: block;
+    background-color: transparent;
+
+    .sidebar-container{
+        animation: fadeout 0.5s ease forwards;
+    }
+    
+}
+
+.top-links{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.link{
+    background-color: var(--color-blue);
+    border: none;
+    height: 50px;
+    gap: 1rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.svg-text{
+    margin-bottom: 0;
+    color: var(--color-yellow);
+    font-weight: 700;
+    font-size: var(--step-1);
+    line-height: 1;
+}
+svg{
+    margin-left: 0;
+    width: 40px;
+}
+
+.svg-guides{
+    transform: translateY(10px);
+}
+
+.svg-login{
+    width: 30px;
+    margin: 0 5px 0 5px;
+}
+
+.svg-logout{
+    width: 30px;
+    transform: translateY(5px);
+    margin-right: 10px;
+}
+
+.bottom-links{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.svg-settings{
+    transform: translateY(7px);
+}
+
+.settings{
+    position: relative;
+    cursor: pointer;
+}
+
+.settings-open::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -25%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-yellow);
+}
+
+
+.setting-items{
+    position: absolute;
+    top: 125%;
+}
+
+.change-password{
+    color: var(--color-yellow);
+    background-color: transparent;
+    border: none;
+    padding: 0.25rem;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+
+.svg-settings-chevron{
+    position: absolute;
+    top: 60%;
+    left: -22%;
+    transition: transform 0.3s ease;
+}
+
+.settings-open .svg-settings-chevron {
+    transform: rotate(90deg);
+}
+
+.setting-item-text{
+    font-size: var(--step--1);
+    margin: 0;
+}
+
+.link:focus-visible{
+    outline: 2px dashed var(--color-yellow);
+}
+
+.change-password:focus-visible{
+    outline: 2px dashed var(--color-yellow);
+}
