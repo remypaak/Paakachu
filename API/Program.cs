@@ -57,5 +57,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 // app.MapIdentityApi<IdentityUser>();
+//Test
 app.Run();
 
